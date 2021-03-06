@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-blue-800 text-black;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+#emoji-btn {
+  filter: grayscale(1);
+}
+
+#emoji-btn:hover {
+  filter: grayscale(0);
+}
+
+emoji-picker {
+  width: 400px;
+  height: 300px;
+}

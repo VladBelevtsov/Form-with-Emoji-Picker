@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Emoji Picker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <div class="h-screen flex items-center justify-center">
+      <form class="block max-w-md w-full bg-gray-50 p-4 rounded-xl">
+        <div class="text-center py-3">
+          <h1 class="text-3xl font-bold">Contact Us</h1>
+        </div>
+        <div id="error" class="mt-8 py-2 px-2 hidden bg-red-100 rounded-md ring-1 ring-red-400 text-red-600 text-sm">
+
+        </div>
+        <div class="pt-8">
+          <input type="text" placeholder="Name" id="name" class="w-full rounded-md">
+        </div>
+        <div class="py-8">
+          <input type="text" placeholder="Email" id="email" class="w-full rounded-md">
+        </div>
+        <div class="relative">
+          <textarea class="w-full rounded-md px-12" id="message" placeholder="Your Message" rows="3"></textarea>
+          <button id="emoji-btn" class="absolute left-0 top-0 w-10 h-10  block text-xl duration-100 transform hover:scale-125 focus:outline-none focus-visible:outline-none">😀</button>
+          <emoji-picker class="hidden absolute top-full left-0 -mt-2"></emoji-picker>
+        </div>
+        <div class="pt-7">
+          <button class="bg-blue-700 text-white px-10 py-2 rounded-md outline-none focus:outline-none">Send</button>
+        </div>
+      </form>
+    </div>
+
+  
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
